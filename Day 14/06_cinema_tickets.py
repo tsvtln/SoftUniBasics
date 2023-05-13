@@ -1,11 +1,6 @@
 FINISHED = False
 END = False
-seats_taken = 0
-total_seats_taken = 0
-student_seats = 0
-standard_seats = 0
-kid_seats = 0
-free_seats = 0
+seats_taken, total_seats_taken, student_seats, standard_seats, kid_seats, free_seats = 0, 0, 0, 0, 0, 0
 
 while not FINISHED:
     movie_name = input()
