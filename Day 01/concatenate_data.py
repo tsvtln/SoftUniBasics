@@ -1,0 +1,6 @@
+name = input('Your name:')
+fam = input('Your Family name:')
+age = str(input('Your age:'))
+town = input('Your town:')
+#print('You are ' +name + ' ' + fam + ', ' + 'a ' + age + '-' + 'years old person from ' + town + '.')
+print(f'You are {name} {fam}, a {age}-years old person from {town}.')
