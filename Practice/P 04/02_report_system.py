@@ -21,6 +21,8 @@ while not END and not FUNDED:
         transaction_number += 1
     if transaction_number % 2 == 0:
         CARD = True
+    else:
+        CARD = False
     if price < 10 and CARD:
         print('Error in transaction!')
         continue
