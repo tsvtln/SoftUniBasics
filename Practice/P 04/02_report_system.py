@@ -19,6 +19,8 @@ while not END and not FUNDED:
     else:
         price = int(price)
         transaction_number += 1
+    if price <= 0:
+        continue
     if transaction_number % 2 == 0:
         CARD = True
     else:
