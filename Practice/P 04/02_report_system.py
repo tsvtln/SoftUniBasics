@@ -41,8 +41,10 @@ while not FINISHED and not FUNDED:
             cash_payment_sum += price
             cash_payment_num += 1
 
-average_card = card_payment_sum / card_payments_num
-average_cash = cash_payment_sum / cash_payment_num
+if card_payments_num != 0 and card_payment_sum != 0:
+    average_card = card_payment_sum / card_payments_num
+if cash_payment_num != 0 and cash_payment_sum != 0:
+    average_cash = cash_payment_sum / cash_payment_num
 if FINISHED:
     print('Failed to collect required money for charity.')
 else:
