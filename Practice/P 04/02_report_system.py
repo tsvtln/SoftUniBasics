@@ -1,5 +1,5 @@
 money_needed = int(input())
-END = False
+FINISHED = False
 CARD = False
 FUNDED = False
 transaction_number = 0
@@ -8,13 +8,13 @@ card_payment_sum = 0
 card_payments_num = 0
 cash_payment_sum = 0
 cash_payment_num = 0
-while not END and not FUNDED:
+while not FINISHED and not FUNDED:
     if fund >= money_needed:
         FUNDED = True
         continue
     price = input()
     if price == 'End':
-        END = True
+        FINISHED = True
         continue
     else:
         price = int(price)
@@ -43,7 +43,7 @@ while not END and not FUNDED:
 
 average_card = card_payment_sum / card_payments_num
 average_cash = cash_payment_sum / cash_payment_num
-if END:
+if FINISHED:
     print('Failed to collect required money for charity.')
 else:
     print(f'Average CS: {average_cash:.2f}')
