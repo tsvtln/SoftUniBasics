@@ -17,10 +17,8 @@ def card(allowance, gender, age, sport):
             'Pilates': 37
         }
     }
-    gender_var = prices.get(gender)
-    gym_price = gender_var.get(sport)
-    if age <= 19:
-        gym_price -= gym_price * 0.2
+    gym_price = prices.get(gender).get(sport)
+    gym_price -= gym_price * 0.2 if age <= 19 else 0
     months = allowance // gym_price
     if months >= 1:
         return f'You purchased a {months:.0f} month pass for {sport}.'
